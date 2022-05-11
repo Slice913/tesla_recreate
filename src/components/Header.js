@@ -19,7 +19,6 @@ function Header() {
         <Menu>
             {cars && cars.map((car, index)=>(
             <a key={index} href="#">{car}</a>
-
             ))}
         </Menu>
             <RightMenu>
@@ -33,14 +32,14 @@ function Header() {
                 <CloseWrapper>
                     <CustomClose onClick={()=> setBurgerState(false)}/>
                 </CloseWrapper>
+                {cars && cars.map((car, index)=>(
+                 <li key={index} ><a href="#">{car}</a></li>
+            ))}
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-in</a></li>
                 <li><a href="#">Cybertruck</a></li>
                 <li><a href="#">Roadaster</a></li>
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Existing Inventory</a></li>
             </BurgerNav>
     </Container>
   )
@@ -110,7 +109,7 @@ const BurgerNav = styled.div`
     flex-direction: column;
     text-align: start;
     transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
-    transition: transform 0.5s;  
+    transition: transform 0.5 s;  
         li {
             padding: 15px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
