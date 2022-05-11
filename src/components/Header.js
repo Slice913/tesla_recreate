@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 function Header() {
     const [burgerStatus,  setBurgerState] = useState(false);
     const cars = useSelector(selectCars);
-// * TS - 2:09    
+
   return (
     <Container>
         <a href="#">
